@@ -1,1 +1,86 @@
-<h1> Hello from TEMPLATES! </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <title>login</title>
+
+    {% load static %}
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+<!-- to overwrite bootstrap-->
+<style>
+    body{background:lightslategray}
+    .nav-item:hover{background: slateblue;}
+
+    .overlay {
+        opacity: .2;
+        background: black;
+        position: relative;
+        width: 50%;
+    }
+
+    .img-thumbnail {
+        opacity: 1;
+        display: block;
+        width:100%;
+        height: auto;
+    }
+
+    .middle {
+            transition: .5s ease; opacity: 0; position: absolute;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            }
+
+    .overlay:hover {background: gray; opacity: 1;transition: .5s ease;
+                    transform: translate(30%, 10%);
+                    -ms-transform: translate(10%, 90%);
+                    }
+
+    .overlay:hover .image {
+                        opacity: 0.3; background: gray; width: 80%
+                        }
+
+    .overlay:hover .middle {
+                            opacity: 1; background: blue
+                            }
+    .overlay h1{text-align:center;}
+</style>
+
+</head>
+
+
+<body>
+<div class="container-fluid">
+    <div >
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+        </ul>
+    </div>
+    <h1> Top of the morning Ya!</h1>
+    <div class="overlay">
+        <img src="https://www.w3school.com/bootstrap4/sanfran.jpg" class="img-thumbnail" alt="Cinque Terre" style ="width: 60%;">
+        <div class="middle">
+            <button class?"btn btn-success">Login</button>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
