@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}TOTP Setup{% endblock %}
+
+{% block content %}
+
+Please use an authenticator app to scan this image and complete your time-based one-time Password (TOTP) setup
+<img src="{{ base64Image }}" />'
+
+<form method="POST" action="login/totpSetup">
+    <table>
+        Enter number from TOTP app to confirm successful registration: <br>
+        <input type="text" name="totp" id="totp">
+    </table>
+    
+    <button type="submit">Confirm</button>
+    {% csrf_token%}
+</form>
+
+{% endblock %}

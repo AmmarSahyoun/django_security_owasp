@@ -1,0 +1,561 @@
+﻿@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:300,400,500,600,700,800,900');
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+*
+{
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	background: #FFFFFF;
+	color: #a5a5a5;
+}
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul
+{
+	list-style: none;
+	margin-bottom: 0px;
+}
+p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.75;
+	font-weight: 400;
+	color: #8f8f8f;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+p a
+{
+	display: inline;
+	position: relative;
+	color: inherit;
+	border-bottom: solid 1px #ffa07f;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+p:last-of-type
+{
+	margin-bottom: 0;
+}
+a, a:hover, a:visited, a:active, a:link
+{
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+p a:active
+{
+	position: relative;
+	color: #FF6347;
+}
+p a:hover
+{
+	color: #FFFFFF;
+	background: #ffa07f;
+}
+p a:hover::after
+{
+	opacity: 0.2;
+}
+::selection
+{
+	background: rgba(187,228,50,0.75);
+	color: #FFFFFF;
+}
+p::selection
+{
+	
+}
+h1{font-size: 48px;}
+h2{font-size: 36px;}
+h3{font-size: 24px;}
+h4{font-size: 18px;}
+h5{font-size: 14px;}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+h1::selection, 
+h2::selection, 
+h3::selection, 
+h4::selection, 
+h5::selection, 
+h6::selection
+{
+	
+}
+.form-control
+{
+	color: #db5246;
+}
+section
+{
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+}
+.clear
+{
+	clear: both;
+}
+.clearfix::before, .clearfix::after
+{
+	content: "";
+	display: table;
+}
+.clearfix::after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom: 1;
+}
+.float_left
+{
+	float: left;
+}
+.float_right
+{
+	float: right;
+}
+.fill_height
+{
+	height: 100%;
+}
+.top_container
+{
+	width: 100%;
+	overflow: hidden;
+	padding-left: 263px;
+}
+
+.nopadding
+{
+	padding: 0px !important;
+}
+.section_container
+{
+	padding-left: 109px;
+	padding-right: 107px;
+}
+.section_container .container
+{
+	max-width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*********************************
+3. Sidebar
+*********************************/
+
+.sidebar
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 263px;
+	height: 100vh;
+	background: #3f000f;
+	z-index: 100;
+}
+.sidebar_logo
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	padding-top: 25px
+}
+.sidebar_logo a
+{
+	display: block;
+}
+.sidebar_logo a > div
+{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	text-align: center;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 0.75;
+}
+.sidebar_logo a > div span
+{
+	text-transform: uppercase;
+}
+/* Navigation */
+.sidebar_nav {
+	padding-left: 45px;
+	margin-top: 33px;
+}
+
+	.sidebar_nav ul {
+		display: inline-block;
+	}
+
+		.sidebar_nav ul li:not(:last-child) {
+			margin-bottom: 8px;
+		}
+
+		.sidebar_nav ul li a {
+			font-family: 'Poppins', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			color: #FFFFFF;
+			text-transform: uppercase;
+			-webkit-transition: all 500ms ease;
+			-moz-transition: all 500ms ease;
+			-ms-transition: all 500ms ease;
+			-o-transition: all 500ms ease;
+			transition: all 500ms ease;
+		}
+
+.sidebar_user {
+	padding-left: 5px;
+	margin-top: 10px;
+}
+	.sidebar_user ul {
+		display: inline-block;
+	}
+
+		.sidebar_user ul li:not(:last-child) {
+			margin-bottom: 8px;
+		}
+
+		.sidebar_user ul li a {
+			font-family: 'Poppins', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			color: #FFFFFF;
+			
+		}
+
+.item_list > *:first-child
+{
+	text-align: left;
+	width: 37%;
+}
+.item_list > *:nth-child(2)
+{
+	width: 13%;
+}
+.item_list > *:nth-child(3)
+{
+	width: 13%;
+	margin-right: 3%;
+}
+.item_list > *:nth-child(4)
+{
+	width: 13%;
+}
+.item_list > *:nth-child(5)
+{
+	width: 9%;
+}
+.item_list > *:nth-child(6)
+{
+	width: 12%;
+}
+.product
+{
+	height: 100%;
+}
+.product_image
+{
+	height: 100%;
+	width: 119px;
+}
+.product_image img
+{
+	max-width: 100%;
+}
+.product_name
+{
+	padding-left: 50px;
+}
+.product_name a
+{
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
+	color: #3f000f;
+	font-weight: 600;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.product_name a:hover
+{
+	color: #bbe432;
+}
+.product_text
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: #3f000f;
+}
+.product_quantity
+{
+	width: 85px;
+	height: 51px;
+	background: #edf4f6;
+}
+.product_quantity > span
+{
+	line-height: 51px;
+	text-align: center;
+}
+.qty_button
+{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 18px;
+	height: 34px;
+	line-height: 34px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #3f000f;
+}
+.qty_button span
+{
+	-webkit-user-select: none;     
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.qty_button:hover
+{
+	color: #bbe432;
+}
+.qty_sub
+{
+	left: 8px;
+}
+.qty_add
+{
+	right: 8px;
+}
+.product_text > span
+{
+	display: none;
+}
+.button
+{
+	height: 47px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.button:not(:last-child)
+{
+	margin-right: 24px;
+}
+.button a
+{
+	display: block;
+	line-height: 47px;
+	padding-left: 47px;
+	padding-right: 47px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #3f000f;
+	text-transform: uppercase;
+}
+.button_continue
+{
+	background: #bbe432;
+}
+.button_continue:hover
+{
+	background: #3f000f;
+}
+.button_continue:hover a
+{
+	color: #bbe432;
+}
+.button_clear
+{
+	background: #edf4f6;
+}
+.button_clear:hover
+{
+	background: #3f000f;
+}
+.button_clear:hover a
+{
+	color: #FFFFFF;
+}
+.button_update
+{
+	background: #3f000f;
+}
+
+
+.button_update a
+{
+	color: #bbe432;
+}
+
+/*********************************
+5. Menu
+*********************************/
+
+.menu
+{
+	position: fixed;
+	top: 0;
+	left: -400px;
+	width: 400px;
+	height: 100vh;
+	background: #1a1a1a;
+	z-index: 101;
+	padding-right: 60px;
+	padding-top: 87px;
+	padding-left: 50px;
+	box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+}
+.menu.active
+{
+	left: 0;
+}
+.menu_close_container
+{
+	position: absolute;
+	top: 30px;
+	right: 60px;
+	width: 18px;
+	height: 18px;
+	transform-origin: center center;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.menu_close
+{
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3D;
+}
+.menu_close div
+{
+	width: 100%;
+	height: 2px;
+	background: #FFFFFF;
+	top: 8px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.menu_close div:last-of-type
+{
+	-webkit-transform: rotate(90deg) translateX(-2px);
+	-moz-transform: rotate(90deg) translateX(-2px);
+	-ms-transform: rotate(90deg) translateX(-2px);
+	-o-transform: rotate(90deg) translateX(-2px);
+	transform: rotate(90deg) translateX(-2px);
+	transform-origin: center;
+}
+.menu_close:hover div
+{
+	background: #bbe432;
+}
+.menu .logo
+{
+	margin-bottom: 60px;
+}
+.menu_nav ul li:not(last-child)
+{
+	margin-bottom: 4px;
+}
+.menu_nav ul li a
+{
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.menu_nav ul li a:hover
+{
+	color: #bbe432;
+}
+
+
+.review_name {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	color: #3f000f;
+	font-weight: 400;
+}
+
+.review_title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	color: #3f000f;
+	font-weight: 600;
+}
+
+.review_details {
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	color: #3f000f;
+	font-weight: 300;
+}
+
+.review_row
+{
+	padding-bottom: 60px
+}
+
+.body_content
+{
+	padding: 20px;
+	font-size: 18px;
+}

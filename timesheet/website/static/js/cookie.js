@@ -1,0 +1,1 @@
+alert('cookies: ' + document.cookie)

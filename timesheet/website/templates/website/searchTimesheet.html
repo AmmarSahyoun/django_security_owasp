@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Search Timesheet{% endblock %}
+
+{% block content %}
+
+
+
+<form method="GET">
+    <table>
+        <tr>
+            <td>search: <input type="text" id="searchText" name="searchText" size="60" autocomplete="off"> </td>
+            <td><button type="submit">Search</button></td>
+        </tr>
+    </table>
+</form>
+
+<br><br>
+
+
+{% if searchResults %}
+<table>
+    There are {{ searchResults|length }} record(s) for "{{searchText}}":
+    {% for searchResult in searchResults %}
+        <tr><td><a href="/timesheets/{{searchResult.id}}">{{searchResult.notes}}</a></td></tr>
+    {% endfor %}
+</table>
+{% else %}
+    There are 0 records for "{{searchText}}":
+{% endif %}
+ 
+
+
+{% endblock %}

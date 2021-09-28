@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Rate Limit Exceeded{% endblock %}
+
+{% block content %}
+
+You have failed to login {{failure_limit}} times <BR><BR>
+
+Your account is now locked for {{cooloff_timedelta}} minutes.
+
+{% endblock %}
+

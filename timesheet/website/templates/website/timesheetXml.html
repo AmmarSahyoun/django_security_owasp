@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Timesheet{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <table>
+        {{form}}
+    </table>
+    
+    <button type="submit">Add</button>
+    {% csrf_token%}
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    
+    if (getCookie('permissions').includes('allowApprove'))
+    {
+        $("#id_approved").css("visibility", "visible");
+        $("#id_approved" ).prop( "checked", true );
+    }
+    else
+    {
+        $('label[for="id_approved"]').css("visibility", "hidden")
+    }
+</script>
+{% endblock %}

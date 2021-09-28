@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Timesheet{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <table>
+        {{form}}
+    </table>
+    
+    <button type="submit">Add / Update</button>
+    {% csrf_token%}
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/timesheet.js"></script>
+{% endblock %}

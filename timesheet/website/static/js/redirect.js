@@ -1,0 +1,1 @@
+window.location.href="https://www.pluralsight.com/courses/getting-started-beef"
