@@ -6,9 +6,9 @@
 * Authentication uses MFA and TOTP  <br>
 * XML defenses  <br>
 * Content security policy against cross-site scripting
+* Password and API secrets protection
+* Logging and monitoring
 
-
-# Under construction #
 
 
 
