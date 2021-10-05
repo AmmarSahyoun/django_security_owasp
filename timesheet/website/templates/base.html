@@ -10,7 +10,62 @@
 </head>
 <body style="background-color: beige;">
 
+{% if user.is_staff %}
+    <input type="hidden" id="adminVisibility" value="visible">
+{% else %}
+    <input type="hidden" id="adminVisibility" value="hidden">
+{% endif %}
 
+{% if user.username == 'admin' %}
+    <input type="hidden" id="allowApprove" value="true">
+{% else %}
+    <input type="hidden" id="allowApprove" value="false">
+{% endif %}
+
+<div class="top_container">
+
+    <div class="sidebar">
+
+        <div class="cart d-flex flex-row align-items-center justify-content-start">
+            <nav class="sidebar_user">
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li><a href="myUser">User: &nbsp; {{request.user.username}}</a></li>
+                        <li><a href={% url 'logout' %}>(Logout)</a><li>
+                    {% else %}
+                        <li><a href={% url 'login' %}>Login</a><li></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+
+        <div class="sidebar_logo">
+            <img width="60" src="/static/images/stop-watch_White.png" alt="">
+        </div>
+
+        <nav class="sidebar_nav" id="AdminLink" style="visibility:hidden">
+            <ul>
+                <!--Admin Endpoint, make sure only admin sees this! -->
+                <li><a href="/deleteUser">Delete Users</a></li>
+            </ul>
+            
+        </nav>
+
+        <nav class="sidebar_nav">
+            <ul>
+                <li><a href={% url 'myUser' %}>My User</a></li>
+                <li><a href={% url 'timesheets' %}>Upload Timesheet</a></li>
+                <li><a href={% url 'timesheets' %}>Add Timesheet</a></li>
+                <li><a href={% url 'searchResults' %}>Search Timesheets</a></li>
+                
+            </ul>
+        </nav>
+
+    </div>
+<div class="body_content">
+    {% block content %}
+    {% endblock %}
+</div>
 
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
