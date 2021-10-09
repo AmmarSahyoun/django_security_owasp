@@ -1,21 +1,21 @@
-"""timesheet URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
+from website.views import logmein, logmeout, search, home
+from website.views.user import myUser, createUser, deleteUser
+from website.views.timesheet import timesheet, getTimesheetById, timesheetXml
+from website.views.totp import checkTotp
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('e44002bf-8b73-4827-8a27-f62326e868d0-admin/', admin.site.urls),
+    path('login', logmein, name="login"),
+    path('home', home, name="home"),
+    path('logout', logmeout, name="logout"),
+    path('myUser', myUser, name="myUser"),
+    path('createUser', createUser, name="createUser"),
+    path('deleteUser', deleteUser, name="deleteUser"),
+    path('timesheets', timesheet, name="timesheets"),
+    path('timesheetsXml', timesheetXml, name="timesheetsXml"),
+    path('timesheets/<int:id>', getTimesheetById, name="getTimesheetById"),
+    path('timesheets/search', search, name="searchResults"),
+    path('login/totpSetup', checkTotp, name="totpSetup"),
 ]
