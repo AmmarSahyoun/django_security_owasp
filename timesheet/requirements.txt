@@ -1,5 +1,5 @@
 ﻿asgiref==3.4.1
-cffi==1.14.6
+pip install==1.14.6
 colorama==0.4.4
 cryptography==3.4.7
 Django==3.2.5
